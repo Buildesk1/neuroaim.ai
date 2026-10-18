@@ -30,7 +30,7 @@ export const AiDiagnosticChatDrawer: React.FC<ChatDrawerProps> = ({
     {
       id: 'welcome-msg',
       sender: 'ai',
-      text: `Greetings Commander! I am your Caliber.ai Technical Coach. Describe your aim issue (e.g. "hands shake in fights", "over-flicking past enemies", or "cannot pull down vertical recoil") and I will compute an optimized profile adjustment.`,
+      text: `Greetings Commander! I am your NeuroAim.AI Technical Coach. Describe your aim issue (e.g. "hands shake in fights", "over-flicking past enemies", or "cannot pull down vertical recoil") and I will compute an optimized profile adjustment.`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
@@ -164,7 +164,7 @@ export const AiDiagnosticChatDrawer: React.FC<ChatDrawerProps> = ({
                 }`}
               >
                 <div className="flex justify-between items-center text-[10px] opacity-70 mb-1 font-mono">
-                  <span>{msg.sender === 'user' ? 'You' : 'Caliber Coach'}</span>
+                  <span>{msg.sender === 'user' ? 'You' : 'NeuroAim Coach'}</span>
                   <span>{msg.timestamp}</span>
                 </div>
 

@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
-import { SensitivityProfile } from './src/types/sensitivity';
+import type { SensitivityProfile } from './src/types/sensitivity';
 import { diagnoseAimSymptoms, calculateBalancedProfile } from './src/utils/sensitivityEngine';
 
 dotenv.config();
@@ -18,15 +18,15 @@ let aiClient: GoogleGenAI | null = null;
 if (GEMINI_API_KEY) {
   try {
     aiClient = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-    console.log('[Caliber Server] Gemini API client initialized successfully.');
+    console.log('[NeuroAim Server] Gemini API client initialized successfully.');
   } catch (err) {
-    console.error('[Caliber Server] Failed to initialize Gemini client:', err);
+    console.error('[NeuroAim Server] Failed to initialize Gemini client:', err);
   }
 } else {
-  console.log('[Caliber Server] No GEMINI_API_KEY detected. Local rule-engine fallback enabled.');
+  console.log('[NeuroAim Server] No GEMINI_API_KEY detected. Local rule-engine fallback enabled.');
 }
 
-const SYSTEM_INSTRUCTION = `You are an expert Call of Duty Mobile (CODM) coach, competitive analyst, and technical aim calibrator. Your job is to analyze user sensitivity settings, diagnose aim issues (over-flicking, under-tracking, panic shaking, scope inconsistency), and output neat, mathematically balanced, and correlative sensitivity profiles.
+const SYSTEM_INSTRUCTION = `You are an expert Call of Duty Mobile (CODM) coach, competitive analyst, and technical aim calibrator. Your job is to analyze user sensitivity settings, diagnose aim issues (over-flicking, under-tracking, panic shaking, scope inconsistency), and output neat, mathematically balanced, and correlative sensitivity profiles for NeuroAim.AI.
 
 Core 47 Anchor Model Rules:
 - Speed Acceleration: ~250 - 273 baseline.
@@ -94,7 +94,7 @@ app.post('/api/chat', async (req, res) => {
           diagnosticResult,
         });
       } catch (geminiErr) {
-        console.warn('[Caliber Server] Gemini API call error, falling back to rule engine:', geminiErr);
+        console.warn('[NeuroAim Server] Gemini API call error, falling back to rule engine:', geminiErr);
       }
     }
 
@@ -105,11 +105,11 @@ app.post('/api/chat', async (req, res) => {
       diagnosticResult,
     });
   } catch (error) {
-    console.error('[Caliber Server] Internal Error:', error);
+    console.error('[NeuroAim Server] Internal Error:', error);
     return res.status(500).json({ error: 'Internal Server Error during calibration.' });
   }
 });
 
 app.listen(PORT, () => {
-  console.log(`[Caliber Server] Server running on port ${PORT}`);
+  console.log(`[NeuroAim Server] Server running on port ${PORT}`);
 });

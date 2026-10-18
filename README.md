@@ -1,6 +1,6 @@
-# Caliber.ai / SenseAI — CODM Sensitivity & Aim Diagnostic Coach
+# NeuroAim.AI — CODM Sensitivity & Aim Diagnostic Coach
 
-Caliber.ai is a high-precision web application designed for competitive *Call of Duty: Mobile (CODM)* players. It provides an interactive sensitivity calculator based on FOV inverse-scaling, pro player preset benchmarks, and a conversational AI Aim Diagnostic Coach powered by Google Gemini.
+NeuroAim.AI is a high-precision web application designed for competitive *Call of Duty: Mobile (CODM)* players. It provides an interactive sensitivity calculator based on FOV inverse-scaling, pro player preset benchmarks, and a conversational AI Aim Diagnostic Coach powered by Google Gemini.
 
 ---
 
@@ -72,7 +72,7 @@ Inside `.env`:
 GEMINI_API_KEY=your_gemini_api_key_here
 PORT=5000
 ```
-*Note: If no API key is provided, Caliber.ai will seamlessly use the built-in mathematical rule engine.*
+*Note: If no API key is provided, NeuroAim.AI will seamlessly use the built-in mathematical rule engine.*
 
 ### 3. Running Development Server
 In terminal 1 (Backend proxy):

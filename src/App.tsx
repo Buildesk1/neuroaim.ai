@@ -37,7 +37,7 @@ export function App() {
               <span>CODM Aim Telemetry & FOV Scaling Matrix</span>
             </div>
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-100 via-cyan-200 to-teal-300">
-              SenseAI / Caliber.ai Engine
+              NeuroAim.AI Engine
             </h1>
             <p className="text-sm text-slate-400 mt-1 max-w-2xl">
               Mathematically balanced sensitivity calibration, high-precision FOV inverse-scaling, and conversational AI aim diagnostics for competitive Call of Duty: Mobile players.
@@ -91,7 +91,7 @@ export function App() {
       {/* Footer */}
       <footer className="border-t border-slate-900 bg-slate-950/80 py-6 text-center text-xs text-slate-500 font-mono">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
-          <span>Caliber.ai v2.4 • CODM Sensitivity & Aim Diagnostic Coach</span>
+          <span>NeuroAim.AI v2.4 • CODM Sensitivity & Aim Diagnostic Coach</span>
           <span>Powered by 47 Anchor Model & Gemini API</span>
         </div>
       </footer>
